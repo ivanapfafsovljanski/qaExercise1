@@ -21,6 +21,7 @@ public class BeginningClass {
 	ProfilePage pageProfile;
 	
 	
+	
 @BeforeClass
 public void beforeClass() throws IOException {
 	
