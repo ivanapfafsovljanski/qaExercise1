@@ -61,6 +61,18 @@ public class ProfileTest extends BeginningClass{
 		pageProfile.savePsw();
 		Assert.assertEquals(pageProfile.errorCurrentPswMsg(), readFromExcell.taxtualValue("Profile", 62, 4));
 	}
+	@Test
+	public void spaceOnBeginning() throws InterruptedException {
+		pageProfile.spacePsw();
+		driver.findElement(By.name("current_password")).sendKeys(pageHome.passw);
+		pageProfile.savePsw();
+		Assert.assertTrue(pageProfile.messageForSavedPsw());
+		Thread.sleep(2000);
+		pageProfile.oldPsw();
+		driver.findElement(By.name("new_password")).sendKeys(pageHome.passw);
+		driver.findElement(By.name("conf_new_password")).sendKeys(pageHome.passw);
+		pageProfile.savePsw();
+		}
 	
 	@AfterMethod
 	public void afterMethod() {

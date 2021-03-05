@@ -121,13 +121,13 @@ public void oldPsw() {
 		confirmPsw = driver.findElement(By.name("conf_new_password"));
 		confirmPsw.sendKeys(readFromExcell.taxtualValue("Profile", 46, 3));
 	}
-	/*public void noCurrentPsw() {
+	public void spacePsw() {
 		js.executeScript("window.scrollBy(0,150)");	
 		newPsw = driver.findElement(By.name("new_password"));
-		newPsw.sendKeys(readFromExcell.taxtualValue("Profile", 44, 3));
+		newPsw.sendKeys(readFromExcell.taxtualValue("Profile", 70, 3));
 		confirmPsw = driver.findElement(By.name("conf_new_password"));
-		confirmPsw.sendKeys(readFromExcell.taxtualValue("Profile", 46, 3));
-	}*/
+		confirmPsw.sendKeys(readFromExcell.taxtualValue("Profile", 72, 3));
+	}
 	public String confirmPswMsg() {
 		mandatoryConfPswMsg = driver.findElement(By.xpath("//*[@id=\"frm_fat_id_changePwdFrm\"]/div/div[3]/fieldset/ul/li[1]/a"));
 		return mandatoryConfPswMsg.getText();

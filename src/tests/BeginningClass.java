@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 
 import pages.InitialPage;
 import pages.MyAccountPage;
+import pages.MyAddressPage;
 import pages.ProfilePage;
 
 public class BeginningClass {
@@ -19,6 +20,7 @@ public class BeginningClass {
 	InitialPage pageHome;
 	MyAccountPage pageMyAccount;
 	ProfilePage pageProfile;
+	MyAddressPage pageMyAddres;
 	
 	
 	
@@ -33,6 +35,7 @@ public void beforeClass() throws IOException {
 	this.pageHome = new InitialPage(driver, js, readFromExcell);
 	this.pageMyAccount = new MyAccountPage(driver);
 	this.pageProfile = new ProfilePage(driver, readFromExcell, js);
+	this.pageMyAddres = new MyAddressPage(driver, readFromExcell, js);
 	
 	driver.manage().window().maximize();
 	

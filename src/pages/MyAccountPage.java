@@ -14,6 +14,9 @@ public class MyAccountPage {
 	public void profileBtnClick() {
 		driver.findElement(By.xpath("//*[@id=\"fixed__panel\"]/ul/li[2]/a")).click();
 	}
+	public void myAddressClick() {
+		driver.findElement(By.partialLinkText("My Address")).click();
+	}
 	
 	
 	
